@@ -269,3 +269,7 @@ puis en strict.
   - jamais `--author` : l'auteur reste celui de `git config`.
 - **[FUSION]** Fusion en commit de fusion (`git merge --no-ff`, jamais de squash ni de rebase),
   puis suppression de la branche, locale et distante, et du worktree : skill `base:fusion`.
+
+## Notes du projet
+
+- Un trajet a au moins une place ; la réservation ne dépasse jamais la capacité (`Seats`).

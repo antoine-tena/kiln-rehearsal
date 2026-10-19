@@ -28,6 +28,9 @@
       "Read(./**/*.p12)",
       "Read(./**/*.jks)",
       "Read(./**/*.keystore)"
+    ],
+    "allow": [
+      "Bash(./backend/mvnw -q test)"
     ]
   }
 }

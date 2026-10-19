@@ -54,6 +54,15 @@ What to do, why, where to look.
 
 ## 🟠 Important
 
+### T-02 · Annuler une réservation
+- **Type**: improvement
+- **Status**: todo
+- **Opened**: 2026-10-15
+- **Effort**: S · **Owner**: — · **Due**: —
+- **Origin**: premier trajet
+
+Une place annulée revient au trajet.
+
 ## 🟡 Normal
 
 ## ⚪ Background — long-running work, debt and ideas

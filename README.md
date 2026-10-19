@@ -83,3 +83,7 @@ priorité), `rejected.md` (ce qui a été refusé) et `urgent.md` (ce que seul u
 3. Fusionner la branche dans `develop` (`git merge --no-ff`, puis push), sans attendre
    d'approbation : skill `base:fusion` avec Claude Code. Une pull request reste possible pour
    demander un avis. On ne commite jamais directement sur `main` ou `develop`.
+
+## Usage
+
+`cd backend && ./mvnw -q test`
