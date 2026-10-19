@@ -1,0 +1,20 @@
+# Réponses de kiln : ne pas modifier à la main, `kiln update` s'en sert.
+_commit: v0.3.3-rc.2
+_src_path: https://github.com/antoine-tena/kiln.git
+backend: java
+boussole: kiln rehearsal en service
+date_creation: '2026-10-19'
+description: A small repo kiln's CI updates on every release branch, before any real
+    repo.
+envergure: flame
+equipe:
+- antoine-tena
+frontend: aucun
+nom: kiln-rehearsal
+podman: false
+proprietaire: antoine-tena
+serena: false
+statusline_ci: true
+titre: kiln rehearsal
+type_projet: api
+url_sante_prod: ''
