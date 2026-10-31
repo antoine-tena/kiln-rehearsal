@@ -1,26 +1,20 @@
-# kiln's answers for this project: never edit by hand, `kiln set` changes them.
-_commit: v0.4.10-17-g9476eb7
+# Réponses de kiln : ne pas modifier à la main, `kiln update` s'en sert.
+_commit: v0.3.3-rc.2
 _src_path: https://github.com/antoine-tena/kiln.git
 backend: java
-ci_runner: github
-compact_window: 400000
-created: '2026-10-19'
+boussole: kiln rehearsal en service
+date_creation: '2026-10-19'
 description: A small repo kiln's CI updates on every release branch, before any real
     repo.
-frontend: none
-java_package: fr.kilnrehearsal
-language: fr
-language_custom: false
-name: kiln-rehearsal
-north_star: kiln rehearsal en service
-owner: antoine-tena
-podman: false
-prod_health_url: ''
-project_type: api
-serena: false
-size: medium
-statusline_ci: true
-team:
+envergure: flame
+equipe:
 - antoine-tena
-timezone: Europe/Paris
-title: kiln rehearsal
+frontend: aucun
+nom: kiln-rehearsal
+podman: false
+proprietaire: antoine-tena
+serena: false
+statusline_ci: true
+titre: kiln rehearsal
+type_projet: api
+url_sante_prod: ''
