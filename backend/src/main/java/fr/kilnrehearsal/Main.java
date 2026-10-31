@@ -5,8 +5,8 @@ import java.io.PrintStream;
 import java.util.Objects;
 
 /**
- * Entry point: reads the arguments, delegates to the service and writes the answer ([LAYERS]).
- * No business logic here.
+ * Point d'entrée : lit les arguments, délègue au service et écrit la réponse ([COUCHES]).
+ * Aucune logique métier ici.
  */
 public final class Main {
 

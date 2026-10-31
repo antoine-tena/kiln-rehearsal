@@ -1,12 +1,12 @@
-# Line endings normalised to LF in the repo, whatever the machine (Windows included).
+# Fins de ligne normalisées en LF dans le dépôt, quel que soit le poste (Windows compris).
 * text=auto eol=lf
-# Windows scripts of the Maven wrapper: CRLF line endings, as cmd.exe expects.
+# Scripts Windows du wrapper Maven : fins de ligne CRLF, que cmd.exe attend.
 *.cmd text eol=crlf
 
-# Binaries.
+# Binaires.
 *.png binary
 *.jpg binary
 *.ico binary
 *.npz binary
 
-# Generated files, exempt from [FILE-SIZE].
+# Fichiers générés, exemptés de [TAILLE-FICHIER] (CLAUDE.md).

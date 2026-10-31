@@ -1,25 +1,22 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "env": {
-    "KILN_PROJECT": "kiln-rehearsal",
-    "KILN_BACKEND_DIR": "backend",
-    "KILN_FRONTEND_DIR": "",
-    "KILN_TEST_ENV": ""
+    "PROJET_NOM": "kiln-rehearsal",
+    "PROJET_BACK": "backend",
+    "PROJET_FRONT": "",
+    "PROJET_ENV_TEST": ""
   },
-  "autoCompactWindow": 400000,
-  "plansDirectory": ".claude/plans",
   "extraKnownMarketplaces": {
     "kiln": {
       "source": {
         "source": "github",
-        "repo": "antoine-tena/kiln",
-        "ref": "main"
+        "repo": "antoine-tena/kiln"
       },
       "autoUpdate": true
     }
   },
   "enabledPlugins": {
-    "kiln@kiln": true
+    "base@kiln": true
   },
   "permissions": {
     "deny": [

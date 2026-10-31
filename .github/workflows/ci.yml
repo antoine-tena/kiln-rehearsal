@@ -1,35 +1,38 @@
 name: CI
 
-# The reusable workflows live in kiln (antoine-tena/kiln, public), cited at the kiln release the
-# project comes from (develop): `kiln update` moves them to the next one. The project only
-# keeps its parameters here.
+# Les workflows réutilisables vivent dans kiln (antoine-tena/kiln, public), cités à la version
+# de kiln dont part le projet (v0.3.3-rc.2) : `kiln update` les fait passer à la suivante. Le
+# projet ne garde ici que ses paramètres.
 on:
-  # Only on the way to main: a release branch. A merge into develop runs fast linters only.
   push:
-    branches: [ "release/**" ]
-  # Callable from another workflow of the repo.
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  # Rejouée par deploy.yml avant toute mise en production.
   workflow_call:
-
-# [WORKFLOW-PERMISSIONS]: the token reads the repo, nothing more; kiln's workflows need no more.
-permissions:
-  contents: read
 
 jobs:
   backend:
-    uses: antoine-tena/kiln/.github/workflows/maven.yml@bd449791cceb736b065f4e007d69e71c12cb992d # develop
+    uses: antoine-tena/kiln/.github/workflows/maven.yml@v0.3.3-rc.2
     with:
-      directory: backend
+      dossier: backend
 
-  charter:
-    uses: antoine-tena/kiln/.github/workflows/charter.yml@bd449791cceb736b065f4e007d69e71c12cb992d # develop
+  charte:
+    uses: antoine-tena/kiln/.github/workflows/charte.yml@v0.3.3-rc.2
 
-  # [SECRETS]: gitleaks searches the whole history, with no organisation licence.
   secrets-scan:
-    uses: antoine-tena/kiln/.github/workflows/secrets.yml@bd449791cceb736b065f4e007d69e71c12cb992d # develop
+    runs-on: ubuntu-latest
+    # Sur une PR, gitleaks lit la liste de ses commits par l'API.
+    permissions:
+      contents: read
+      pull-requests: read
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
 
-  security:
-    uses: antoine-tena/kiln/.github/workflows/security.yml@bd449791cceb736b065f4e007d69e71c12cb992d # develop
-    with:
-      uv: ""
-      pnpm: ""
-      maven: backend
+      # [SECRETS] : tout l'historique est fouillé, pas seulement le dernier commit.
+      - name: Rechercher des secrets (gitleaks)
+        uses: gitleaks/gitleaks-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
